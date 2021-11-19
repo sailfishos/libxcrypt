@@ -385,6 +385,7 @@ done
 
 
 %files
+%license AUTHORS COPYING.LIB LICENSING
 %doc %dir %{_docdir}/%{name}
 %doc %{_docdir}/%{name}/NEWS
 %doc %{_docdir}/%{name}/README
