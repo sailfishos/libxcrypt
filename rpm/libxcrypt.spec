@@ -12,6 +12,8 @@
 # Replace obsolete functions with a stub?
 %bcond_with    libxcrypt_enosys_stubs
 
+%bcond_without staticlib
+%global keepstatic 1
 
 # We don't have this currently just define it
 %global _vpath_builddir build
@@ -435,12 +437,12 @@ done
 
 %if %{with staticlib}
 %files          static
-%dir %{_fipsdir}
+#dir %%{_fipsdir}
 %doc %{_docdir}/%{name}/README.static
-%{_fipsdir}/libcrypt.a.hmac
-%if %{without libxcrypt_new_api}
-%{_fipsdir}/libxcrypt.a.hmac
-%endif
+#%%{_fipsdir}/libcrypt.a.hmac
+#if %%{without libxcrypt_new_api}
+#%%{_fipsdir}/libxcrypt.a.hmac
+#endif
 %{_libdir}/libcrypt.a
 %if %{without libxcrypt_new_api}
 %{_libdir}/libxcrypt.a
