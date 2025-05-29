@@ -98,15 +98,15 @@
 %global _ld_strict_symbol_defs 1
 
 Name:           libxcrypt
-Version:        4.4.23
+Version:        4.4.38
 Release:        1
 Summary:        Extended crypt library for descrypt, md5crypt, bcrypt, and others
 
 # For explicit license breakdown, see the
 # LICENSING file in the source tarball.
 License:        LGPLv2+ and BSD and Public Domain
-URL:            https://github.com/besser82/%{name}
-Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+URL:            https://github.com/sailfishos/libxcrypt
+Source0:        %{name}-%{version}.tar.gz
 
 # Patch 0000 - 2999: Backported patches from upstream.
 
@@ -116,10 +116,8 @@ Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  autoconf
 BuildRequires:  automake
-BuildRequires:  gcc
 BuildRequires:  glibc-devel           >= %{glibc_minver}
 BuildRequires:  libtool
-BuildRequires:  make
 # perl-core is a bit to much try just
 BuildRequires:  perl
 
