@@ -98,7 +98,7 @@
 %global _ld_strict_symbol_defs 1
 
 Name:           libxcrypt
-Version:        4.4.38
+Version:        4.5.2
 Release:        1
 Summary:        Extended crypt library for descrypt, md5crypt, bcrypt, and others
 
@@ -109,6 +109,7 @@ URL:            https://github.com/sailfishos/libxcrypt
 Source0:        %{name}-%{version}.tar.gz
 
 # Patch 0000 - 2999: Backported patches from upstream.
+Patch0001:      0001-fix-Werror-discarded-qualifiers.patch
 
 # Patch 3000 - 5999: Backported patches from pull requests.
 
